@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Schedule</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gym Schedule</h1>
+    <div id="calendar"></div>
+
+    <script>
+        const schedule = {
+            'Monday': ['6:00 AM - 10:00 PM', '7:00 AM - Yoga', '6:00 PM - Spin Class'],
+            'Tuesday': ['6:00 AM - 10:00 PM', '8:00 AM - HIIT', '7:00 PM - Zumba'],
+            'Wednesday': ['6:00 AM - 10:00 PM', '7:00 AM - Pilates', '6:00 PM - Boxing'],
+            'Thursday': ['6:00 AM - 10:00 PM', '8:00 AM - CrossFit', '7:00 PM - Yoga'],
+            'Friday': ['6:00 AM - 10:00 PM', '7:00 AM - Spin Class', '6:00 PM - HIIT'],
+            'Saturday': ['8:00 AM - 8:00 PM', '9:00 AM - Zumba', '11:00 AM - Yoga'],
+            'Sunday': ['8:00 AM - 6:00 PM', '10:00 AM - Pilates']
+        };
+
+        function createCalendar() {
+            let table = '<table><tr><th>Day</th><th>Hours & Classes</th></tr>';
+            
+            for (const [day, activities] of Object.entries(schedule)) {
+                table += `<tr><td>${day}</td><td>${activities.join('<br>')}</td></tr>`;
+            }
+            
+            table += '</table>';
+            document.getElementById('calendar').innerHTML = table;
+        }
+
+        createCalendar();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="landing.css">
+    </head>
+    <body>
+        <div class="banner">
+            <video autoplay loop muted id="vid3">
+                <source src="videos/vid1.mp1" type="video/mp4">
+            </video>
+            <div class="navbar">
+                <img class="logo" src="logo.png">
+            </div>
+            <div class="content">
+                <h1>EXPLORE THE FITLIFE GYM</h1>
+                <div>
+                    <button type="button" onclick="goToHomePage()">Explore</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function goToHomePage() {
+                window.location.href = "homepage.html";
+            }
+        </script>
+    </body>
+</html>
